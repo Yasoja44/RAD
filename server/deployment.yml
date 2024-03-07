@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "ctse-user-server"
+  namespace: "default"
+  labels:
+    app: "ctse-user-server"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "ctse-user-server"
+  template:
+    metadata:
+      labels:
+        app: "ctse-user-server"
+    spec:
+      containers:
+      - name: "ctseuser-1"
+        image: "gcr.io/animated-backup-349310/github.com/yasoja44/ctseuser:$SHORT_SHA"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "ctse-user-server-hpa-fxp3"
+  namespace: "default"
+  labels:
+    app: "ctse-user-server"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "ctse-user-server"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80

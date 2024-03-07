@@ -1,0 +1,18 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "ctse-user-server-service"
+  namespace: "default"
+  labels:
+    app: "ctse-user-server"
+    app.kubernetes.io/managed-by: "gcp-cloud-build-deploy"
+    app.kubernetes.io/name: "ctse-user-server"
+    app.kubernetes.io/version: "3752f5106bdaf4e7a24bbdc1f028285dec89a3ed"
+spec:
+  ports:
+  - protocol: "TCP"
+    port: 5000
+  selector:
+    app: "ctse-user-server"
+  type: "ClusterIP"
