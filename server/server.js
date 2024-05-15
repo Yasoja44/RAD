@@ -5,6 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const userAPI=require('./src/api/UserAPI');
+const recordAPI = require('./src/api/RecordAPI');
 
 const app = express();
 app.use(cors());
@@ -33,6 +34,7 @@ mongoose.connect(MONGODB_URI, {
 });
 
 app.use('/users', userAPI());
+app.use('/records', recordAPI());
 
 mongoose.connection.once('open', () => {
   console.log('Database Connected');

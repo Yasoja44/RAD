@@ -146,7 +146,32 @@ class Header extends Component {
                             :
                             null
                         }
-                        
+                        { localStorage.getItem('userPosition') === "admin" ||
+                        localStorage.getItem('userPosition') === "patient" ||
+                        localStorage.getItem('userPosition') === "doctor" 
+                             ?
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page"
+                                       href={'http://localhost:3000/addRecord/' + this.state.id }>Add Record</a>
+                                </li>
+                            </ul>
+                            :
+                            null
+                        }
+                        { localStorage.getItem('userPosition') === "admin" ||
+                        localStorage.getItem('userPosition') === "patient" ||
+                        localStorage.getItem('userPosition') === "doctor" 
+                             ?
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page"
+                                       href={'http://localhost:3000/showRecord/' + this.state.id }>Show Record</a>
+                                </li>
+                            </ul>
+                            :
+                            null
+                        }
                        
                         {localStorage.getItem('userPosition') === "admin" || localStorage.getItem('userPosition') === "patient" ||
                         localStorage.getItem('userPosition') === "doctor" || localStorage.getItem('userPosition') === " " ||  !this.state.isLoggedIn ?

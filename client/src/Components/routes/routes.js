@@ -19,6 +19,8 @@ import ConfirmEmail from "../../Actions/confirmEmail";
 import Homepage from "../../registration/Homepage";
 import ContactUs from "../../registration/pages/ContactUs/contactUs";
 
+import AddRecord from "../../Components/record/addRecord";
+import ShowRecord from "../../Components/record/showRecord";
 
 function Routes() {
     return (
@@ -48,6 +50,9 @@ function Routes() {
                             <Route path="/users/reset_password/:id" element={<Reset />}/>
                             <Route path="/users/activate/:auth_token" element={<ConfirmEmail />}/>
 
+                            {/* Record Routes */}
+                            <Route path="/addRecord/:id" element={<AddRecord />} />
+                            <Route path="/showRecord/:id" element={<ShowRecord />} />
                         </Route>
                     </Switch>
                 </Router>
