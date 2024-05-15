@@ -1,6 +1,6 @@
-# Group-ID - 2022_WE_30
+# Group-ID - CodeRed
 
-## Project Name - Gym Management System
+## Project Name - Digital Medical Record Management System
 
 ## Group Details
 
@@ -8,22 +8,17 @@
 
 | Name                            | Student ID    | Username      |
 | ------------------------------- | ------------- | ------------- |
-| Salika Madhushanka W.J          | IT19101620    | Salika952     |
-| P.Y.D Jayasinghe                | IT19117256    | Yasoja44      |
-| K.M. Umesh Ranthilina           | IT19240152    | ranthilina99  |
-| H.H.W.M.Binuka Sihan Paranagama | IT19129372    | shehanblast   |
+| P.Y.D Jayasinghe                | MS24015462    |       |
+| H M P P B Herath         |  MS24017756 |   |
+| K T Liyanage| MS24041584    |    |
                                                              
 ## Project Description:
 
-The Hugo Gym application is a gym management app and its main purpose is to make the life of gym employees as well as customers
-easier.
+The Digital Medical Record Management System (DMMRS) — this is a project that will use a digital solution to replace traditional paper-based records. The given project is made with the stack MERN, MongoDB, Express.js, React.js, and Node.js Just Securely, a secure and user-friendly way of medical data management. With the implementation of this system, healthcare professionals and patients can share necessary data, make referrals, and check medication history easily without any chances of exposure to errors or lost information.
 
 ## Featuers:
 
-Contains Login and Profile management for both employees and customers.
-Has Gym Stock Management for gym equipements.
-Has a online store for gym goers.
-Workout and Diet management for users.
+
 
 ## Techonologies:
 
